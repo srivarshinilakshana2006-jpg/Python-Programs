@@ -1,0 +1,297 @@
+digit base:
+         
+1 question:Write a program to count the number of digits in a given integer.
+
+📥 Input
+A single integer N
+
+📤 Output
+Print the number of digits
+
+✅ Example
+Input:
+12345
+
+Output:
+5
+Input:
+0
+
+Output:
+1
+
+
+solu:
+     n = int(input())
+     print(len(str(abs(n))))
+2 question:Write a program to find the sum of all even digits in a given number.
+
+📥 Input Format
+A single integer N
+
+📤 Output Format
+Print the sum of even digits
+
+🧾 Constraints
+0 ≤ N ≤ 10^9
+
+✅ Example
+Input:
+1234
+Output:
+6
+
+Input:
+137
+Output:
+0
+
+solu:
+     n = int(input())
+     total = 0
+
+     while n > 0:
+          digit = n % 10
+          if digit % 2 == 0:
+             total += digit
+          n //= 10
+
+          print(total)
+3 question:Write a program to find the product of all digits of a given integer.
+📥 Input
+A single integer N
+
+📤 Output
+Print the product of digits
+
+✅ Example
+Input:
+123
+
+Output:
+6
+
+solu:  
+     n = int(input())
+     n = abs(n)
+     product = 1
+
+     if n == 0:
+         product = 0
+   else:
+       while n > 0:
+       digit = n % 10
+       product *= digit
+       n //= 10
+
+   print(product)
+4 question:Write a program to reverse a given integer.
+
+📥 Input
+A single integer N
+
+📤 Output
+Print the reversed number
+
+✅ Example
+Input:
+1234
+
+Output:
+4321
+
+solu:
+     n = int(input())
+     rev = 0
+
+    while n > 0:
+           digit = n % 10
+           rev = rev * 10 + digit
+           n //= 10
+
+           print(rev)
+5 question:Write a program to check whether a given number is a palindrome or not.
+A number is a palindrome if it remains the same when its digits are reversed.
+
+🔍 Examples
+121 → reverse → 121 ✅ Palindrome
+123 → reverse → 321 ❌ Not Palindrome
+444 → reverse → 444 ✅ Palindrome
+
+📥 Input Format
+A single integer N
+
+📤 Output Format
+Print "Palindrome" if the number is same when reversed
+Otherwise print "Not Palindrome"
+
+solu:
+     n = int(input())
+temp = n
+rev = 0
+
+while n > 0:
+    digit = n % 10
+    rev = rev * 10 + digit
+    n //= 10
+
+if temp == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+6 question:Write a program to find the first digit of a given number.
+
+📥 Input Format
+A single integer N
+
+📤Output Format
+Print the first digit of the number
+
+🧾Constraints
+0 ≤ N ≤ 10^9
+
+✅ Example
+Input:
+9876
+
+Output:
+9
+
+solu:
+n = int(input())
+while n>=10:
+  n//=10
+print(n)
+
+7 question:Write a program to count how many zeros (0s) are present in a given number.
+
+📥 Input Format
+A single integer N
+
+📤 Output Format
+Print the count of zeros in the number
+
+🧾 Constraints
+0 ≤ N ≤ 10^9
+
+✅ Example
+Input:
+10020
+Output:
+3
+
+solu:
+n = int(input())
+count = 0
+
+if n == 0:
+    count = 1
+else:
+    while n > 0:
+        digit = n % 10
+        if digit == 0:
+            count += 1
+        n //= 10
+
+print(count)
+
+8 question:An Armstrong number is a number where the sum of each digit raised to the power of total number of digits is equal to the original number.
+Example:
+For 3-digit (153):
+Digits = 3
+1³ + 5³ + 3³ = 153 ✅
+
+For 4-digit (9474):
+Digits = 4
+9⁴ + 4⁴ + 7⁴ + 4⁴ = 9474 ✅
+
+📥 Input
+A single integer N
+
+📤 Output
+Print "Armstrong" or "Not Armstrong"
+
+solu:
+n = int(input())
+n1=n2=n
+c,res=0,0
+while n>0:
+  c+=1
+  n//=10
+while n1>0:
+  r=n1%10
+  res=res+int(pow(r,c))
+  n1//=10
+if res==n2:
+  print("Armstrong")
+else:
+  print("Not Armstrong")
+
+9 question:Write a program to check whether a number is a Strong number.
+Explanation :
+👉 A number is Strong if:
+Sum of factorial of digits = original number
+145 → 1! + 4! + 5! = 145 → Strong Number
+123 → 1! + 2! + 3! = 9 ≠ 123 → Not Strong Number
+📥 Input
+A single integer N
+
+📤 Output
+Print "Strong" or "Not Strong"
+
+🧾 Constraints
+0 ≤ N ≤ 10^7
+✅ Example
+Input:
+145
+
+Output:
+Strong
+
+solu:
+n=int(input())
+n1=n
+res=0
+while n>0:
+  r=n%10
+  f=1
+  for i in range(1,r+1):
+    f=f*i
+  res=res+f
+  n//=10
+    
+if res==n1:
+    print("Strong")
+else:
+    print("Not Strong")
+
+10 question:Write a program to check whether a given number is a Perfect number or not.
+
+👉 A number is called Perfect if the sum of its proper divisors (excluding itself) is equal to the number.
+Explanation:
+Perfect number :
+Factors of 6 = 1, 2, 3
+Sum = 1 + 2 + 3 = 6
+
+Not Perfect Number:
+10 → 1 + 2 + 5 = 8 ≠ 10 → Not Perfect
+
+📥 Input Format
+A single integer N
+📤 Output Format
+Print "Perfect" if the number is perfect
+Otherwise print "Not Perfect"
+
+solu:
+n = int(input())
+total = 0
+
+for i in range(1, n):
+    if n % i == 0:
+        total += i
+
+if total == n:
+    print("Perfect")
+else:
+    print("Not Perfect") 
