@@ -1,0 +1,272 @@
+patter:
+      1 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+*****
+*****
+*****
+***** 
+
+solu:
+for i in range(4):
+    for j in range(5):
+      print("*", end="")
+    print()
+
+2 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+*
+**
+***
+****
+***** 
+
+solu:
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+3 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+1
+12
+123
+1234
+12345
+
+solu:
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+4 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+1
+22
+333
+4444
+55555
+
+solu:
+for i in range(1, 6):
+    for j in range(i):
+        print(i, end="")
+    print()
+5 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+solu:num = 1
+
+for i in range(1, 6):
+    for j in range(i):
+        print(num, end=" ")
+        num += 1
+    print()
+
+6 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+1
+01
+101
+0101
+10101
+010101
+
+solu:
+for i in range(1, 7):
+    for j in range(i):
+        if (i + j) % 2 == 0:
+            print("1", end="")
+        else:
+            print("0", end="")
+    print()
+
+7 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+1
+23
+123
+1231
+23123
+
+solu:
+for i in range(1, 6):
+    for j in range(i):
+        print((i + j - 1) % 3 + 1, end="")
+    print()
+
+8 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+5
+5 4
+5 4 3
+5 4 3 2
+5 4 3 2 1
+
+solu:
+for i in range(1, 6):
+    for j in range(5, 5 - i, -1):
+        print(j, end=" ")
+    print()
+
+9 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+5
+4 5
+3 4 5
+2 3 4 5
+1 2 3 4 5
+
+solu:
+for i in range(5, 0, -1):
+    for j in range(i, 6):
+        print(j, end=" ")
+    print()
+
+10 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+    1
+   12
+  123
+ 1234
+12345 
+
+solu:for i in range(1, 6):
+    print(" " * (5 - i), end="")
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+11 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+
+solu:
+for i in range(1, 6):
+    print(" " * (5 - i), end="")
+    for j in range(2 * i - 1):
+        print("*", end="")
+    print()
+
+12 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+    2
+   24
+  246
+ 2468
+246810 
+
+solu:
+for i in range(1, 6):
+    print(" " * (5 - i), end="")
+    for j in range(1, i + 1):
+        print(j * 2, end="")
+    print()
+
+13 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+* * * *
+*     *
+*     *
+* * * * 
+
+solu:
+for i in range(4):
+    for j in range(4):
+        if i == 0 or i == 3 or j == 0 or j == 3:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+14 question:Print the pattern given below, using loops.
+
+Input:
+No input is required.
+
+Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+solu:
+for i in range(1, 6):
+    print(" " * (5 - i), end="")
+    print("*" * (2 * i - 1))
+
+for i in range(4, 0, -1):
+    print(" " * (5 - i), end="")
+    print("*" * (2 * i - 1))
